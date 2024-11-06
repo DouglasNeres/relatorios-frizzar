@@ -1,0 +1,93 @@
+:root {
+  --bg-white: #ffffff;
+  --body-bg: #f5f5f9;
+  --text-primary: #22303EEE;
+  --text-secondary: #22303EB3;
+  --text-disabled: #22303E66;
+  --success-main: #71DD37;
+  --error-main: #FF3E1D;
+  --primary-main: #696CFF;
+  --chip-background: #22303E14;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--body-bg);
+  font-family: "Public Sans", sans-serif;
+}
+
+.dashboard {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.dashboard .card {
+  background-color: var(--bg-white);
+  min-width: 15%;
+  padding: 1.25rem;
+  box-shadow: 0px 3px 8px rgba(20, 20, 29, 0.22);
+  border: 0;
+  border-bottom: 3px solid var(--primary-main);
+}
+
+.card .card-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card .card-title h4 {
+  color: var(--text-primary);
+}
+
+.date-filter-dropdown .date-filter, .date-filter-dropdown .dropdown-toggle{
+  border: 0;
+  border-radius: 4px;
+  padding: 6px 10px;
+  background-color: var(--chip-background);
+  color: var(--text-secondary);
+}
+
+.card p {
+  font-weight: 800;
+}
+
+.card p, .card .meta {
+  color: var(--text-secondary);
+}
+
+.card .card-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card .card-content span {
+  color: var(--success-main);
+  font-weight: 500;
+}
+
+.percentual {
+  display: flex;
+  align-items: center;
+}
+
+.porcentagem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.progress {
+  height: 6px !important;
+  width: 80%;
+}
+
+.progress-bar {
+  background-color: var(--primary-main) !important;
+  box-shadow: 0px 2px 4px rgba(105, 108, 255, 0.4);
+}
