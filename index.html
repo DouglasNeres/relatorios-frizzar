@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,11 +15,12 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
   <script src="script.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js" integrity="sha512-L0Shl7nXXzIlBSUUPpxrokqq4ojqgZFQczTYlGjzONGTDAcLremjwaWv5A+EDLnxhQzY5xUZPWLOLqYRkY0Cbw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
-  <section class="dashboard">
-    <section class="row">
+  <div class="dashboard">
+    <div class="row d-flex justify-content-between">
       <div class="card col-3">
         <div class="card-title">
           <p>MRR</p>
@@ -177,8 +177,8 @@
           </div>
         </div>
       </div>
-    </section>
-    <section class="row">
+    </div>
+    <!-- <div class="row">
       <div class="container col">
         <div class="tabs">
           <div class="tab active">Vendas</div>
@@ -304,16 +304,55 @@
           <img src="assets/atrasado.png" alt="Ícone de cobrança">
         </div>
       </div>
-      <div class="">
+      <div class="extra-services">
+        <div class="date-filter-dropdown">
+          <button type="button" class="date-filter">Nov</button>
+          <button type="button" class="dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown">
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">Separated link</a></li>
+          </ul>
+        </div>
         <p>Serviços Extras</p>
-        <h5>482k</h5>
+        <h4>482k</h4>
+        <span>+34%</span>
+        <div class="meta">
+          <span>Meta de Vendas</span>
+          <div class="porcentagem">
+            <div class="progress" role="progressbar">
+              <div class="progress-bar" style="width: 78%"></div>
+            </div>
+            <span>78%</span>
+          </div>
+        </div>
       </div>
-      <div>
+      <div class="visiting-days">
+        <div class="date-filter-dropdown">
+          <button type="button" class="date-filter">Nov</button>
+          <button type="button" class="dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown">
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">Separated link</a></li>
+          </ul>
+        </div>
         <p>Dias de mais visitas</p>
-        <h5>35 dias</h5>
+        <h4>35 dias</h4>
+        <canvas class=""></canvas>
       </div>
-    </section>
-  </section>
+    </div> -->
+  </div>
 </body>
 
 </html>
