@@ -6,9 +6,12 @@
   --text-disabled: #22303E66;
   --success-main: #71DD37;
   --error-main: #FF3E1D;
+  --error-opacity-darker: #FF3E1D61;
+  --info-opacity-darker: #03C3EC61;
   --primary-main: #696CFF;
   --chip-background: #22303E14;
   --divider: #22303E1F;
+  --warning-opacity-darker: #FFAB0061;
 
   --shadow-md: 0px 3px 8px rgba(20, 20, 29, 0.22);
   --primary-shadow-sm: 0px 2px 4px rgba(105, 108, 255, 0.4);
@@ -22,7 +25,6 @@
 
 body {
   background-color: var(--body-bg);
-  padding: 35px;
   font-family: "Public Sans", sans-serif;
 }
 
@@ -32,7 +34,7 @@ body a {
 
 .dashboard {
   gap: 1.5rem;
-  padding: 5rem 3rem 0 20rem;
+  padding: 4rem 2rem 0 4rem;
 }
 
 .dashboard .card {
@@ -41,7 +43,22 @@ body a {
   padding: 1.25rem;
   box-shadow: var(--shadow-md);
   border: 0;
+}
+
+.dashboard .card:nth-child(1) {
   border-bottom: 3px solid var(--primary-main);
+}
+
+.dashboard .card:nth-child(2) {
+  border-bottom: 3px solid var(--warning-opacity-darker);
+}
+
+.dashboard .card:nth-child(3) {
+  border-bottom: 3px solid var(--error-opacity-darker);
+}
+
+.dashboard .card:nth-child(4) {
+  border-bottom: 3px solid var(--info-opacity-darker);
 }
 
 .card .card-title {
