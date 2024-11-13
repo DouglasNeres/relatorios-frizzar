@@ -32,32 +32,33 @@ body a {
   text-decoration: none;
 }
 
-.dashboard {
+.dashboard-assinatura {
   gap: 1.5rem;
-  padding: 4rem 2rem 0 4rem;
+  padding: 1rem 2rem 0 2rem;
 }
 
-.dashboard .card {
+.dashboard-assinatura .card {
   background-color: var(--bg-white);
   width: 20rem;
   padding: 1.25rem;
   box-shadow: var(--shadow-md);
   border: 0;
+  margin-top: 1rem;
 }
 
-.dashboard .card:nth-child(1) {
+.dashboard-assinatura .card:nth-child(1) {
   border-bottom: 3px solid var(--primary-main);
 }
 
-.dashboard .card:nth-child(2) {
+.dashboard-assinatura .card:nth-child(2) {
   border-bottom: 3px solid var(--warning-opacity-darker);
 }
 
-.dashboard .card:nth-child(3) {
+.dashboard-assinatura .card:nth-child(3) {
   border-bottom: 3px solid var(--error-opacity-darker);
 }
 
-.dashboard .card:nth-child(4) {
+.dashboard-assinatura .card:nth-child(4) {
   border-bottom: 3px solid var(--info-opacity-darker);
 }
 
