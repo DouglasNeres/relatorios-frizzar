@@ -34,7 +34,7 @@ body a {
 
 .dashboard-assinatura {
   gap: 1.5rem;
-  padding: 1rem 2rem 0 2rem;
+  padding: 0 2rem 0 2rem;
 }
 
 .dashboard-assinatura .card {
