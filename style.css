@@ -43,24 +43,23 @@ body a {
   box-shadow: var(--shadow-md);
   border: 0;
 }
-
-.dashboard-assinatura .card:nth-child(1) {
-  border-bottom: 3px solid var(--primary-main);
+.mrr {
+  border-bottom: 3px solid var(--primary-main) !important;
 }
 
-.dashboard-assinatura .card:nth-child(2) {
-  border-bottom: 3px solid var(--warning-opacity-darker);
+ .assinantes {
+  border-bottom: 3px solid var(--warning-opacity-darker) !important;
 }
 
-.dashboard-assinatura .card:nth-child(3) {
-  border-bottom: 3px solid var(--error-opacity-darker);
+.vendas {
+  border-bottom: 3px solid var(--error-opacity-darker) !important;
 }
 
-.dashboard-assinatura .card:nth-child(4) {
-  border-bottom: 3px solid var(--info-opacity-darker);
+.frequencia {
+  border-bottom: 3px solid var(--info-opacity-darker) !important;
 }
 
-.card .card-title {
+.card-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
