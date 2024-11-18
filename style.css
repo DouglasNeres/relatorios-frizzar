@@ -1,16 +1,23 @@
 :root {
   --bg-white: #ffffff;
   --body-bg: #f5f5f9;
+
   --text-primary: #22303EEE;
   --text-secondary: #22303EB3;
   --text-disabled: #22303E66;
-  --success-main: #71DD37;
-  --error-main: #FF3E1D;
-  --error-opacity-darker: #FF3E1D61;
-  --info-opacity-darker: #03C3EC61;
-  --primary-main: #696CFF;
   --chip-background: #22303E14;
   --divider: #22303E1F;
+
+  --success-main: #71DD37;
+
+  --error-main: #FF3E1D;
+  --error-opacity-darker: #FF3E1D61;
+
+  --info-opacity-darker: #03C3EC61;
+  --info-opacity-light: #03C3EC29;
+
+  --primary-main: #696CFF;
+
   --warning-opacity-darker: #FFAB0061;
 
   --shadow-md: 0px 3px 8px rgba(20, 20, 29, 0.22);
@@ -33,8 +40,13 @@ body a {
 }
 
 .dashboard-assinatura {
-  gap: 1.5rem;
   padding: 0 2rem 0 2rem;
+}
+
+.dashboard-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .dashboard-assinatura .card {
@@ -125,24 +137,57 @@ body a {
   box-shadow: var(--primary-shadow-sm);
 }
 
+.vendas-cancelamento, .historico-mrr {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+  background-color: var(--bg-white);
+  box-shadow: var(--shadow-md);
+  border-radius: 6px;
+}
+
+.vendas-cancelamento .vendas-header, .historico-mrr .historico-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.vendas-cancelamento .vendas-header h5, .historico-mrr .historico-header h5 {
+  color: var(--text-primary);
+}
+
+.vendas-cancelamento .sales-chart, .historico-mrr .historical-chart {
+  max-width: 400px;
+}
+
 .container {
   background: #ffffff;
   border-radius: 6px;
   box-shadow: var(--shadow-md);
   overflow: hidden;
-  height: 410px;
-  max-width: 40rem !important;
   margin: 0 !important;
   padding: 0 !important;
 }
 
-/* Tab Navigation */
+.container h5 {
+  color: var(--text-primary);
+  padding: 15px 30px;
+  font-size: large;
+  border-bottom: 1px solid var(--divider);
+}
+
 .tabs {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 1.5rem;
   border-bottom: 1px solid var(--divider);
-  padding: 15px 20px;
+  padding: 10px 30px;
+}
+
+.tabs .tabs-group {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
 }
 
 .tab {
@@ -165,7 +210,6 @@ body a {
   box-shadow: var(--primary-shadow-sm);
 }
 
-/* Table Styles */
 table {
   width: 90%;
   margin-left: 24px;
@@ -304,4 +348,39 @@ th {
 
 .visiting-days h4 {
   color: var(--text-primary);
+}
+
+.tickets {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ticket-assinatura, .ticket-avulso {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 1.25rem;
+  padding: 1rem 2rem !important;
+  background: linear-gradient(135deg, #E4EAF7 0%, #D3D8EB 100%);
+}
+
+.ticket-content h5 {
+  color: var(--text-secondary);
+}
+
+.ticket-content h3 {
+  color: var(--text-primary);
+}
+
+.ticket-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0075FF;
+  border-radius: .75rem;
+  padding: 1rem;
+}
+
+.ticket-icon img {
+  width: 1.3rem;
 }
