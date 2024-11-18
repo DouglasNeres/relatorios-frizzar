@@ -155,10 +155,6 @@ body a {
   color: var(--text-primary);
 }
 
-.vendas-cancelamento .sales-chart, .historico-mrr .historical-chart {
-  max-width: 400px;
-}
-
 .container {
   background: #ffffff;
   border-radius: 6px;
@@ -227,6 +223,16 @@ td {
   color: var(--text-primary);
 }
 
+td.status {
+  display: none;
+}
+
+td.status.visible {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 th {
   font-weight: normal;
   text-transform: uppercase;
@@ -261,6 +267,10 @@ th {
   background-color: #4caf50;
 }
 
+.uc {
+  background-color: #00000095;
+}
+
 .safari {
   background-color: #673ab7;
 }
@@ -273,9 +283,12 @@ th {
   background-color: #ff9800;
 }
 
-.opera,
-.uc {
+.opera {
   background-color: #f44336;
+}
+
+.hidden {
+  display: none;
 }
 
 .collection {
