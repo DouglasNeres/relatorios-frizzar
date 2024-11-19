@@ -74,7 +74,6 @@
                   <li><a class="dropdown-item" href="#">Action</a></li>
                   <li><a class="dropdown-item" href="#">Another action</a></li>
                   <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  <hr>
                   <hr class="dropdown-divider">
                   </hr>
                   </li>
@@ -208,7 +207,7 @@
               </div>
             </div>
             <div class="sales-chart">
-              <canvas width="300" height="60" id="vendasCancelamentos"></canvas>
+              <canvas width="300" height="70" id="vendasCancelamentos"></canvas>
             </div>
           </div>
           <div class="row historico-mrr">
@@ -231,20 +230,13 @@
               </div>
             </div>
             <div class="historical-chart">
-              <canvas width="300" height="60" id="historicoMRR"></canvas>
+              <canvas width="300" height="70" id="historicoMRR"></canvas>
             </div>
           </div>
         </div>
         <div class="container col">
-          <h5>Resumo do Mês</h5>
-          <div class="tabs">
-            <div class="tabs-group">
-              <div class="tab active">Vendas</div>
-              <div class="tab">Saídas</div>
-              <div class="tab">Total</div>
-              <div class="tab">Motivos de Cancelamento</div>
-              <div class="tab">Novos Assinantes</div>
-            </div>
+          <div class="container-header">
+            <h5>Resumo do Mês</h5>
             <div class="date-filter-dropdown">
               <button type="button" class="date-filter">Nov</button>
               <button type="button" class="dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown">
@@ -261,167 +253,204 @@
               </ul>
             </div>
           </div>
-          <table>
-            <thead>
-              <tr>
-                <th data-tab="1,2,3,5">Plano</th>
-                <th data-tab="1">Vendas</th>
-                <th data-tab="2">Cancelamentos</th>
-                <th data-tab="3">Total de Assinantes</th>
-                <th data-tab="4">Motivo</th>
-                <th data-tab="5">Nome</th>
-                <th data-tab="1">Receita</th>
-                <th data-tab="2">Receita Perdida</th>
-                <th data-tab="3">Receita Mensal</th>
-                <th data-tab="4">Nº de Cancelamentos</th>
-                <th data-tab="1,2,3,4">Percentual</th>
-                <th data-tab="5">Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td id="plano" data-tab="1,2,3,5">Pro</td>
-                <td id="nome" data-tab="5">Joao Emanuel</td>
-                <td id="cancelamentos" data-tab="2">18</td>
-                <td id="vendas" data-tab="1">20</td>
-                <td id="total-assinantes" data-tab="3">21</td>
-                <td id="motivo-cancelamento" data-tab="4">Sem acessibilidade</td>
-                <td id="receita-vendas" data-tab="1">15.92k</td>
-                <td id="receita-perdida" data-tab="2">23k</td>
-                <td id="receita-mensal" data-tab="3">16.2k</td>
-                <td id="numero-cancelamentos" data-tab="4">23</td>
-                <td class="status" data-tab="5">Off<div
-                    style="background-color: var(--error-main); border-radius: 50%; width: 14px; height: 14px;"></div>
-                </td>
-                <td data-tab="1,2,3,4">
-                  <div class="progress-container">
-                    <div class="table-percentual">
-                      <div class="progress-fill chrome" style="width: 85.12%;"></div>
+          <div class="tabs">
+            <div class="tabs-group">
+              <div class="tab active">Vendas</div>
+              <div class="tab">Saídas</div>
+              <div class="tab">Total</div>
+              <div class="tab">Motivos de Cancelamento</div>
+              <div class="tab">Novos Assinantes</div>
+            </div>
+          </div>
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th data-tab="1,2,3,5">Plano</th>
+                  <th data-tab="1">Vendas</th>
+                  <th data-tab="2">Cancelamentos</th>
+                  <th data-tab="3">Total de Assinantes</th>
+                  <th data-tab="4">Motivo</th>
+                  <th data-tab="5">Nome</th>
+                  <th data-tab="1">Receita</th>
+                  <th data-tab="2">Receita Perdida</th>
+                  <th data-tab="3">Receita Mensal</th>
+                  <th data-tab="4">Nº de Cancelamentos</th>
+                  <th data-tab="1,2,3,4">Percentual</th>
+                  <th data-tab="5">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td id="plano" data-tab="1,2,3,5">Duo</td>
+                  <td id="nome" data-tab="5">Aparecido Nascimento</td>
+                  <td id="cancelamentos" data-tab="2">40</td>
+                  <td id="vendas" data-tab="1">40</td>
+                  <td id="total-assinantes" data-tab="3">50</td>
+                  <td id="motivo-cancelamento" data-tab="4">Escalabilidade</td>
+                  <td id="receita-vendas" data-tab="1">18.92k</td>
+                  <td id="receita-perdida" data-tab="2">30k</td>
+                  <td id="receita-mensal" data-tab="3">11.2k</td>
+                  <td id="numero-cancelamentos" data-tab="4">28</td>
+                  <td class="status" data-tab="5">On<div
+                      style="background-color: var(--success-main); border-radius: 50%; width: 14px; height: 14px;">
                     </div>
-                    <span class="progress-value">85.12%</span>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td id="plano" data-tab="1,2,3,5">Solo</td>
-                <td id="nome" data-tab="5">Nonato Tavares</td>
-                <td id="cancelamentos" data-tab="2">25</td>
-                <td id="vendas" data-tab="1">55</td>
-                <td id="total-assinantes" data-tab="3">78</td>
-                <td id="motivo-cancelamento" data-tab="4">Preço</td>
-                <td id="receita-vendas" data-tab="1">50k</td>
-                <td id="receita-perdida" data-tab="2">30k</td>
-                <td id="receita-mensal" data-tab="3">45.2k</td>
-                <td id="numero-cancelamentos" data-tab="4">60</td>
-                <td class="status" data-tab="5">Off<div
-                    style="background-color: var(--error-main); border-radius: 50%; width: 14px; height: 14px;"></div>
-                </td>
-                <td data-tab="1,2,3,4">
-                  <div class="progress-container">
-                    <div class="table-percentual">
-                      <div class="progress-fill uc" style="width: 71.16%;"></div>
+                  </td>
+                  <td data-tab="1,2,3,4">
+                    <div class="progress-container">
+                      <div class="table-percentual">
+                        <div class="progress-fill uc" style="width: 80.50%;"></div>
+                      </div>
+                      <span class="progress-value">80.50%</span>
                     </div>
-                    <span class="progress-value">71.16%</span>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td id="plano" data-tab="1,2,3,5">Pro</td>
-                <td id="nome" data-tab="5">Lara Rodrigues</td>
-                <td id="cancelamentos" data-tab="2">22</td>
-                <td id="vendas" data-tab="1">52</td>
-                <td id="total-assinantes" data-tab="3">30</td>
-                <td id="motivo-cancelamento" data-tab="4">Falta de recursos disponiveis</td>
-                <td id="receita-vendas" data-tab="1">16.5k</td>
-                <td id="receita-perdida" data-tab="2">15k</td>
-                <td id="receita-mensal" data-tab="3">36.2k</td>
-                <td id="numero-cancelamentos" data-tab="4">40</td>
-                <td class="status" data-tab="5">On <div
-                    style="background-color: var(--success-main); border-radius: 50%; width: 14px; height: 14px;"></div>
-                </td>
-                <td data-tab="1,2,3,4">
-                  <div class="progress-container">
-                    <div class="table-percentual">
-                      <div class="progress-fill safari" style="width: 42.1%;"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td id="plano" data-tab="1,2,3,5">Pro</td>
+                  <td id="nome" data-tab="5">Joao Emanuel</td>
+                  <td id="cancelamentos" data-tab="2">18</td>
+                  <td id="vendas" data-tab="1">20</td>
+                  <td id="total-assinantes" data-tab="3">21</td>
+                  <td id="motivo-cancelamento" data-tab="4">Sem acessibilidade</td>
+                  <td id="receita-vendas" data-tab="1">15.92k</td>
+                  <td id="receita-perdida" data-tab="2">23k</td>
+                  <td id="receita-mensal" data-tab="3">16.2k</td>
+                  <td id="numero-cancelamentos" data-tab="4">23</td>
+                  <td class="status" data-tab="5">Off<div
+                      style="background-color: var(--error-main); border-radius: 50%; width: 14px; height: 14px;"></div>
+                  </td>
+                  <td data-tab="1,2,3,4">
+                    <div class="progress-container">
+                      <div class="table-percentual">
+                        <div class="progress-fill chrome" style="width: 85.12%;"></div>
+                      </div>
+                      <span class="progress-value">85.12%</span>
                     </div>
-                    <span class="progress-value">42.1%</span>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td id="plano" data-tab="1,2,3,5">Duo</td>
-                <td id="nome" data-tab="5">José Silva</td>
-                <td id="cancelamentos" data-tab="2">4</td>
-                <td id="vendas" data-tab="1">12</td>
-                <td id="total-assinantes" data-tab="3">26</td>
-                <td id="motivo-cancelamento" data-tab="4">Suporte</td>
-                <td id="receita-vendas" data-tab="1">40k</td>
-                <td id="receita-perdida" data-tab="2">10k</td>
-                <td id="receita-mensal" data-tab="3">32.2k</td>
-                <td id="numero-cancelamentos" data-tab="4">2</td>
-                <td class="status" data-tab="5">On <div
-                    style="background-color: var(--success-main); border-radius: 50%; width: 14px; height: 14px;"></div>
-                </td>
-                <td data-tab="1,2,3,4">
-                  <div class="progress-container">
-                    <div class="table-percentual">
-                      <div class="progress-fill firefox" style="width: 30.22%;"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td id="plano" data-tab="1,2,3,5">Solo</td>
+                  <td id="nome" data-tab="5">Nonato Tavares</td>
+                  <td id="cancelamentos" data-tab="2">25</td>
+                  <td id="vendas" data-tab="1">55</td>
+                  <td id="total-assinantes" data-tab="3">78</td>
+                  <td id="motivo-cancelamento" data-tab="4">Preço</td>
+                  <td id="receita-vendas" data-tab="1">50k</td>
+                  <td id="receita-perdida" data-tab="2">30k</td>
+                  <td id="receita-mensal" data-tab="3">45.2k</td>
+                  <td id="numero-cancelamentos" data-tab="4">60</td>
+                  <td class="status" data-tab="5">Off<div
+                      style="background-color: var(--error-main); border-radius: 50%; width: 14px; height: 14px;"></div>
+                  </td>
+                  <td data-tab="1,2,3,4">
+                    <div class="progress-container">
+                      <div class="table-percentual">
+                        <div class="progress-fill uc" style="width: 71.16%;"></div>
+                      </div>
+                      <span class="progress-value">71.16%</span>
                     </div>
-                    <span class="progress-value">30.22%</span>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td id="plano" data-tab="1,2,3,5">Solo</td>
-                <td id="nome" data-tab="5">Francisa Amanda</td>
-                <td id="cancelamentos" data-tab="2">45</td>
-                <td id="vendas" data-tab="1">2</td>
-                <td id="total-assinantes" data-tab="3">10</td>
-                <td id="motivo-cancelamento" data-tab="4">Preço</td>
-                <td id="receita-vendas" data-tab="1">13</td>
-                <td id="receita-perdida" data-tab="2">3k</td>
-                <td id="receita-mensal" data-tab="3">5k</td>
-                <td id="numero-cancelamentos" data-tab="4">15</td>
-                <td class="status" data-tab="5">Off<div
-                    style="background-color: var(--error-main); border-radius: 50%; width: 14px; height: 14px;"></div>
-                </td>
-                <td data-tab="1,2,3,4">
-                  <div class="progress-container">
-                    <div class="table-percentual">
-                      <div class="progress-fill edge" style="width: 14.12%;"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td id="plano" data-tab="1,2,3,5">Pro</td>
+                  <td id="nome" data-tab="5">Lara Rodrigues</td>
+                  <td id="cancelamentos" data-tab="2">22</td>
+                  <td id="vendas" data-tab="1">52</td>
+                  <td id="total-assinantes" data-tab="3">30</td>
+                  <td id="motivo-cancelamento" data-tab="4">Falta de recursos disponiveis</td>
+                  <td id="receita-vendas" data-tab="1">16.5k</td>
+                  <td id="receita-perdida" data-tab="2">15k</td>
+                  <td id="receita-mensal" data-tab="3">36.2k</td>
+                  <td id="numero-cancelamentos" data-tab="4">40</td>
+                  <td class="status" data-tab="5">On <div
+                      style="background-color: var(--success-main); border-radius: 50%; width: 14px; height: 14px;">
                     </div>
-                    <span class="progress-value">14.12%</span>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td id="plano" data-tab="1,2,3,5">Pro</td>
-                <td id="nome" data-tab="5">João Ferreira</td>
-                <td id="cancelamentos" data-tab="2">15</td>
-                <td id="vendas" data-tab="1">42</td>
-                <td id="total-assinantes" data-tab="3">27</td>
-                <td id="motivo-cancelamento" data-tab="4">Sem acessibilidade</td>
-                <td id="receita-vendas" data-tab="1">15.92k</td>
-                <td id="receita-perdida" data-tab="2">23k</td>
-                <td id="receita-mensal" data-tab="3">16.2k</td>
-                <td id="numero-cancelamentos" data-tab="4">23</td>
-                <td class="status" data-tab="5">On <div
-                    style="background-color: var(--success-main); border-radius: 50%; width: 14px; height: 14px;"></div>
-                </td>
-                <td data-tab="1,2,3,4">
-                  <div class="progress-container">
-                    <div class="table-percentual">
-                      <div class="progress-fill opera" style="width: 55.12%;"></div>
+                  </td>
+                  <td data-tab="1,2,3,4">
+                    <div class="progress-container">
+                      <div class="table-percentual">
+                        <div class="progress-fill safari" style="width: 42.1%;"></div>
+                      </div>
+                      <span class="progress-value">42.1%</span>
                     </div>
-                    <span class="progress-value">55.12%</span>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td id="plano" data-tab="1,2,3,5">Duo</td>
+                  <td id="nome" data-tab="5">José Silva</td>
+                  <td id="cancelamentos" data-tab="2">4</td>
+                  <td id="vendas" data-tab="1">12</td>
+                  <td id="total-assinantes" data-tab="3">26</td>
+                  <td id="motivo-cancelamento" data-tab="4">Suporte</td>
+                  <td id="receita-vendas" data-tab="1">40k</td>
+                  <td id="receita-perdida" data-tab="2">10k</td>
+                  <td id="receita-mensal" data-tab="3">32.2k</td>
+                  <td id="numero-cancelamentos" data-tab="4">2</td>
+                  <td class="status" data-tab="5">On <div
+                      style="background-color: var(--success-main); border-radius: 50%; width: 14px; height: 14px;">
+                    </div>
+                  </td>
+                  <td data-tab="1,2,3,4">
+                    <div class="progress-container">
+                      <div class="table-percentual">
+                        <div class="progress-fill firefox" style="width: 30.22%;"></div>
+                      </div>
+                      <span class="progress-value">30.22%</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td id="plano" data-tab="1,2,3,5">Solo</td>
+                  <td id="nome" data-tab="5">Francisa Amanda</td>
+                  <td id="cancelamentos" data-tab="2">45</td>
+                  <td id="vendas" data-tab="1">2</td>
+                  <td id="total-assinantes" data-tab="3">10</td>
+                  <td id="motivo-cancelamento" data-tab="4">Preço</td>
+                  <td id="receita-vendas" data-tab="1">13</td>
+                  <td id="receita-perdida" data-tab="2">3k</td>
+                  <td id="receita-mensal" data-tab="3">5k</td>
+                  <td id="numero-cancelamentos" data-tab="4">15</td>
+                  <td class="status" data-tab="5">Off<div
+                      style="background-color: var(--error-main); border-radius: 50%; width: 14px; height: 14px;"></div>
+                  </td>
+                  <td data-tab="1,2,3,4">
+                    <div class="progress-container">
+                      <div class="table-percentual">
+                        <div class="progress-fill edge" style="width: 14.12%;"></div>
+                      </div>
+                      <span class="progress-value">14.12%</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td id="plano" data-tab="1,2,3,5">Pro</td>
+                  <td id="nome" data-tab="5">João Ferreira</td>
+                  <td id="cancelamentos" data-tab="2">15</td>
+                  <td id="vendas" data-tab="1">42</td>
+                  <td id="total-assinantes" data-tab="3">27</td>
+                  <td id="motivo-cancelamento" data-tab="4">Sem acessibilidade</td>
+                  <td id="receita-vendas" data-tab="1">15.92k</td>
+                  <td id="receita-perdida" data-tab="2">23k</td>
+                  <td id="receita-mensal" data-tab="3">16.2k</td>
+                  <td id="numero-cancelamentos" data-tab="4">23</td>
+                  <td class="status" data-tab="5">On <div
+                      style="background-color: var(--success-main); border-radius: 50%; width: 14px; height: 14px;">
+                    </div>
+                  </td>
+                  <td data-tab="1,2,3,4">
+                    <div class="progress-container">
+                      <div class="table-percentual">
+                        <div class="progress-fill opera" style="width: 55.12%;"></div>
+                      </div>
+                      <span class="progress-value">55.12%</span>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-      </div>
-      <!-- <div class="collection col-4">
+        <!-- <div class="collection col-4">
     <div class="collection-content">
         <h5>Clientes em Atraso</h5>
         <div>
@@ -482,7 +511,7 @@
       <canvas class=""></canvas>
     </div>
   </div> -->
-      <!-- <div class="row tickets">
+        <!-- <div class="row tickets">
         <div class="col-md-6 ticket-assinatura">
           <div class="ticket-content">
             <h5>Ticket Médio Assinaturas</h5>
@@ -508,9 +537,9 @@
           </div>
         </div>
       </div> -->
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="script.js"></script>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script src="script.js"></script>
 </body>
 
 </html>

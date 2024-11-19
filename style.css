@@ -164,11 +164,18 @@ body a {
   padding: 0 !important;
 }
 
+.container-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  border-bottom: 1px solid var(--divider);
+}
+
 .container h5 {
   color: var(--text-primary);
-  padding: 15px 30px;
   font-size: large;
-  border-bottom: 1px solid var(--divider);
+  margin-top: 8px;
 }
 
 .tabs {
@@ -206,11 +213,24 @@ body a {
   box-shadow: var(--primary-shadow-sm);
 }
 
+.table-container {
+  max-height: 380px;
+  overflow-y: auto;
+}
+
+
 table {
   width: 90%;
   margin-left: 24px;
   border-collapse: collapse;
   text-align: left;
+}
+
+thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: var(--bg-white);
 }
 
 tbody {
