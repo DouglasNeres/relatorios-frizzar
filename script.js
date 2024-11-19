@@ -80,6 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     options: {
       responsive: true,
+      maintainAspectRatio: false,
       plugins: {
           legend: {
               position: 'top',
@@ -121,5 +122,27 @@ document.addEventListener('DOMContentLoaded', () => {
           },
           pointHoverRadius: 10
       }]
-  }
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+        legend: {
+            position: 'top',
+        },
+        tooltip: {
+            mode: 'index',
+            intersect: false,
+        }
+    },
+    scales: {
+        x: {
+            stacked: false
+        },
+        y: {
+            stacked: false,
+            beginAtZero: true
+        }
+    }
+}
   })
