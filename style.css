@@ -180,17 +180,11 @@ body a {
 
 .tabs {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
   gap: 1.5rem;
+  align-items: center;
+  justify-content: flex-start;
   border-bottom: 1px solid var(--divider);
   padding: 10px 30px;
-}
-
-.tabs .tabs-group {
-  display: flex;
-  align-items: center;
-  gap: 3rem;
 }
 
 .tab {
