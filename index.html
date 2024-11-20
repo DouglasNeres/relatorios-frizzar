@@ -447,94 +447,187 @@
             </table>
           </div>
         </div>
-        <!-- <div class="collection col-4">
-    <div class="collection-content">
-        <h5>Clientes em Atraso</h5>
-        <div>
-          <p>R$598</p>
-          <span>20 em atraso</span>
-        </div>
-        <a href="">Enviar Cobrança</a>
       </div>
-      <div>
-        <img src="assets/atrasado.png" alt="Ícone de cobrança">
-      </div>
-    </div>
-    <div class="extra-services">
-      <div class="date-filter-dropdown">
-        <button type="button" class="date-filter">Nov</button>
-        <button type="button" class="dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown">
-        </button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Action</a></li>
-          <li><a class="dropdown-item" href="#">Another action</a></li>
-          <li><a class="dropdown-item" href="#">Something else here</a></li>
-          <li>
-            <hr class="dropdown-divider"></hr>
-          </li>
-          <li><a class="dropdown-item" href="#">Separated link</a></li>
-        </ul>
-      </div>
-      <p>Serviços Extras</p>
-      <h4>482k</h4>
-      <span>+34%</span>
-      <div class="meta">
-        <span>Meta de Vendas</span>
-        <div class="porcentagem">
-          <div class="progress" role="progressbar">
-            <div class="progress-bar" style="width: 78%"></div>
-          </div>
-          <span>78%</span>
-        </div>
-      </div>
-    </div>
-    <div class="visiting-days">
-      <div class="date-filter-dropdown">
-        <button type="button" class="date-filter">Nov</button>
-        <button type="button" class="dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown">
-        </button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Action</a></li>
-          <li><a class="dropdown-item" href="#">Another action</a></li>
-          <li><a class="dropdown-item" href="#">Something else here</a></li>
-          <li>
-            <hr class="dropdown-divider"></hr>
-          </li>
-          <li><a class="dropdown-item" href="#">Separated link</a></li>
-        </ul>
-      </div>
-      <p>Dias de mais visitas</p>
-      <h4>35 dias</h4>
-      <canvas class=""></canvas>
-    </div>
-  </div> -->
-        <!-- <div class="row tickets">
-        <div class="col-md-6 ticket-assinatura">
-          <div class="ticket-content">
-            <h5>Ticket Médio Assinaturas</h5>
-            <div class="d-flex">
-              <h3>2,300</h3>
-              <span>+5%</span>
+      <div class="row justify-content-space-between" style="padding: 0 12px 0 12px;">
+        <div class="container col-7">
+          <div class="container-header">
+            <h5>Clientes</h5>
+            <div class="date-filter-dropdown">
+              <button type="button" class="date-filter">Nov</button>
+              <button type="button" class="dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown">
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                  </hr>
+                </li>
+                <li><a class="dropdown-item" href="#">Separated link</a></li>
+              </ul>
             </div>
           </div>
-          <div class="ticket-icon">
-            <img src="assets/outline.png" alt="Global Icon">
+          <div class="tabs">
+            <div class="tab active">Mais Visitas</div>
+            <div class="tab">Serviço Extra</div>
+            <div class="tab">Produtos</div>
+            <div class="tab">Novos Assinantes</div>
+          </div>
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Plano</th>
+                  <th>Nome</th>
+                  <th>Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td id="plano">Duo</td>
+                  <td id="nome">Aparecido Nascimento</td>
+                  <td id="total-assinantes">502</td>
+                </tr>
+                <tr>
+                  <td id="plano">Pro</td>
+                  <td id="nome">Raissa Oliveira</td>
+                  <td id="total-assinantes">112</td>
+                </tr>
+                <tr>
+                  <td id="plano">Solo</td>
+                  <td id="nome">Leticia Amanda</td>
+                  <td id="total-assinantes">322</td>
+                </tr>
+                <tr>
+                  <td id="plano">Pro</td>
+                  <td id="nome">João Gomes</td>
+                  <td id="total-assinantes">132</td>
+                </tr>
+                <tr>
+                  <td id="plano">Duo</td>
+                  <td id="nome">Gabriel Vieira</td>
+                  <td id="total-assinantes">210</td>
+                </tr>
+                <tr>
+                  <td id="plano">Solo</td>
+                  <td id="nome">Amâncio Tavares</td>
+                  <td id="total-assinantes">205</td>
+                </tr>
+                <tr>
+                  <td id="plano">Pro</td>
+                  <td id="nome">Carol Lima</td>
+                  <td id="total-assinantes">498</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
-        <div class="col-md-6 ticket-avulso">
-          <div class="ticket-content">
-            <h5>Ticket Médio Assinaturas</h5>
-            <div class="d-flex">
-              <h3>2,300</h3>
-              <span>+5%</span>
+        <div class="col-5 d-flex flex-column gap-2">
+          <div class="collection">
+            <div class="collection-content">
+              <h5>Clientes em Atraso</h5>
+              <div>
+                <p>R$598</p>
+                <span>20 em atraso</span>
+              </div>
+              <a href="">Enviar Cobrança</a>
+            </div>
+            <div>
+              <img src="assets/atrasado.png" alt="Ícone de cobrança">
             </div>
           </div>
-          <div class="ticket-icon">
-            <img src="assets/outline.png" alt="Global Icon">
+          <div class="d-flex gap-2">
+            <div class="col">
+              <div class="card extra-services">
+                <div class="extra-services-content">
+                  <p>Serviços Extras</p>
+                  <div class="date-filter-dropdown">
+                    <button type="button" class="date-filter">Nov</button>
+                    <button type="button" class="dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown">
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      <li>
+                        <hr class="dropdown-divider">
+                        </hr>
+                      </li>
+                      <li><a class="dropdown-item" href="#">Separated link</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div>
+                  <h4>482k</h4>
+                  <span class="percentual">+34%</span>
+                </div>
+                <div class="meta">
+                  <span>Meta de Vendas</span>
+                  <div class="porcentagem">
+                    <div class="progress" role="progressbar">
+                      <div class="progress-bar" style="width: 78%"></div>
+                    </div>
+                    <span>78%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card visiting-days gap-4">
+                <div class="visiting-days-content">
+                  <p>Dias de mais visitas</p>
+                  <div class="date-filter-dropdown">
+                    <button type="button" class="date-filter">Nov</button>
+                    <button type="button" class="dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown">
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      <li>
+                        <hr class="dropdown-divider">
+                        </hr>
+                      </li>
+                      <li><a class="dropdown-item" href="#">Separated link</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div>
+                  <h4>35 dias</h4>
+                </div>
+                <canvas height="40" width="100" id="diasMaisVisitas"></canvas>
+              </div>
+            </div>
           </div>
         </div>
-      </div> -->
       </div>
+      <!-- <div class="row tickets">
+      <div class="col-md-6 ticket-assinatura">
+        <div class="ticket-content">
+          <h5>Ticket Médio Assinaturas</h5>
+          <div class="d-flex">
+            <h3>2,300</h3>
+            <span>+5%</span>
+          </div>
+        </div>
+        <div class="ticket-icon">
+          <img src="assets/outline.png" alt="Global Icon">
+        </div>
+      </div>
+      <div class="col-md-6 ticket-avulso">
+        <div class="ticket-content">
+          <h5>Ticket Médio Assinaturas</h5>
+          <div class="d-flex">
+            <h3>2,300</h3>
+            <span>+5%</span>
+          </div>
+        </div>
+        <div class="ticket-icon">
+          <img src="assets/outline.png" alt="Global Icon">
+        </div>
+      </div>
+    </div> -->
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
       <script src="script.js"></script>
 </body>

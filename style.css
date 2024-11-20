@@ -15,6 +15,7 @@
 
   --info-opacity-darker: #03C3EC61;
   --info-opacity-light: #03C3EC29;
+  --info-main: #03C3EC;
 
   --primary-main: #696CFF;
 
@@ -312,7 +313,7 @@ th {
   background-color: var(--bg-white);
   box-shadow: var(--shadow-md);
   padding: 3rem 2.5rem;
-  width: 30%;
+  border-radius: 6px;
 }
 
 .collection img {
@@ -353,8 +354,18 @@ th {
   box-shadow: var(--primary-shadow-sm);
 }
 
-.extra-services {
+.extra-services, .visiting-days {
   background-color: var(--bg-white);
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  gap: 1rem;
+}
+
+.extra-services-content, .visiting-days-content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
 }
 
 .extra-services p {
@@ -365,8 +376,20 @@ th {
   color: var(--text-primary);
 }
 
-.visiting-days {
-  background-color: var(--bg-white);
+.extra-services .percentual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--info-main);
+  background-color: var(--info-opacity-light);
+  border-radius: 4px;
+  padding: 4px 10px;
+  width: 60px;
+}
+
+.extra-services .meta .porcentagem {
+  display: flex;
+  gap: 1.25rem;
 }
 
 .visiting-days p {

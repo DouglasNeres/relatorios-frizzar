@@ -1,6 +1,7 @@
 const tabs = document.querySelectorAll('.tab');
 const vendasChart = document.getElementById('vendasCancelamentos').getContext('2d')
 const historicoChart = document.getElementById('historicoMRR').getContext('2d')
+const visitasChart = document.getElementById('diasMaisVisitas').getContext('2d')
 const tableHeaders = document.querySelectorAll('th');
 const tableCells = document.querySelectorAll('td');
 
@@ -146,3 +147,40 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 }
   })
+
+  new Chart(visitasChart, {
+    type: 'bar',
+    data: {
+      labels: ['S', 'T', 'Q', 'Q', 'S', 'S', 'D'],
+      datasets: [
+        {
+          label: 'Vendas',
+            data: [10, 20, 5, 50, 60, 15, 20],
+            backgroundColor: 'rgba(54, 162, 235, 0.5)',
+            borderColor: 'rgba(54, 162, 235, 1)',
+            borderWidth: 1
+        },
+    ],
+    },
+    options: {
+      responsive: true,
+      plugins: {
+          legend: {
+              position: 'top',
+          },
+          tooltip: {
+              mode: 'index',
+              intersect: false,
+          }
+      },
+      scales: {
+          x: {
+              stacked: false
+          },
+          y: {
+              stacked: false,
+              beginAtZero: true
+          }
+      }
+  }
+  });
