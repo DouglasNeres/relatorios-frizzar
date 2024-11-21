@@ -1,61 +1,16 @@
-const tabs = document.querySelectorAll('.tab');
 const vendasChart = document.getElementById('vendasCancelamentos').getContext('2d')
 const historicoChart = document.getElementById('historicoMRR').getContext('2d')
 /* const visitasChart = document.getElementById('diasMaisVisitas').getContext('2d') */
-const tableHeaders = document.querySelectorAll('th');
-const tableCells = document.querySelectorAll('td');
 
-function updateTable(activeTab) {
-  const statusTd = document.querySelectorAll('td.status');
-  statusTd.forEach(statusTd => {
-    if (statusTd.dataset.tab.includes(activeTab)) {
-      statusTd.classList.add('visible');
-    } else {
-      statusTd.classList.remove('visible');
-    }
-  });
-  // Ocultar todas as colunas inicialmente
-  tableHeaders.forEach(header => {
-    if (header.dataset.tab) {
-      header.classList.add('hidden');
-    }
-  });
-
-  tableCells.forEach(cell => {
-    if (cell.dataset.tab) {
-      cell.classList.toggle('hidden', !cell.dataset.tab.includes(activeTab));
-    }
-  });
-
-  // Mostrar colunas da aba ativa
-  tableHeaders.forEach(header => {
-    if (header.dataset.tab && header.dataset.tab.includes(activeTab)) {
-      header.classList.remove('hidden');
-    }
-  });
-
-  tableCells.forEach(cell => {
-    if (cell.dataset.tab && cell.dataset.tab.includes(activeTab)) {
-      cell.classList.remove('hidden');
-    }
-  });
-}
-
-tabs.forEach((tab, index) => {
+document.querySelectorAll('.tab').forEach((tab) => {
   tab.addEventListener('click', () => {
-    tabs.forEach(t => t.classList.remove('active'));
-    tab.classList.add('active');
-    const activeTab = (index + 1).toString();
-    updateTable(activeTab);
-  });
-});
+    document.querySelectorAll('.tab').forEach((t) => t.classList.remove('active'));
+    document.querySelectorAll('.table').forEach((table) => table.classList.remove('active'));
 
-document.addEventListener('DOMContentLoaded', () => {
-  const defaultTab = document.querySelector('.tab.active');
-  if (defaultTab) {
-    const activeTab = '1'; // Supondo que "Vendas" corresponde ao índice 1
-    updateTable(activeTab);
-  }
+    tab.classList.add('active');
+    const targetTable = document.querySelector(tab.getAttribute('data-target'));
+    targetTable.classList.add('active');
+  });
 });
 
   new Chart(vendasChart, {

@@ -185,8 +185,8 @@
           </div>
         </div>
       </div>
-      <div class="row gap-2 justify-content-space-between" style="padding: 0 12px 0 12px;">
-        <div class="col-12 col-xl-6 d-flex flex-column gap-4">
+      <div class="row gap-3 justify-content-space-between" style="padding: 0 12px 0 12px;">
+        <div class="col-12 col-xl-6 d-flex flex-column gap-3">
           <div class="row vendas-cancelamento">
             <div class="vendas-header">
               <h5>Vendas x Cancelamento</h5>
@@ -254,46 +254,27 @@
             </div>
           </div>
           <div class="tabs">
-            <div class="tab active">Vendas</div>
-            <div class="tab">Saídas</div>
-            <div class="tab">Total</div>
-            <div class="tab">Motivos de Cancelamento</div>
+            <div class="tab active" data-target="#tab1">Vendas</div>
+            <div class="tab" data-target="#tab2">Saídas</div>
+            <div class="tab" data-target="#tab3">Total</div>
+            <div class="tab" data-target="#tab4">Motivos de Cancelamento</div>
           </div>
           <div class="table-container">
-            <table>
+            <table id="tab1" class="table active">
               <thead>
                 <tr>
-                  <th data-tab="1,2,3,5">Plano</th>
-                  <th data-tab="1">Vendas</th>
-                  <th data-tab="2">Cancelamentos</th>
-                  <th data-tab="3">Total de Assinantes</th>
-                  <th data-tab="4">Motivo</th>
-                  <th data-tab="5">Nome</th>
-                  <th data-tab="1">Receita</th>
-                  <th data-tab="2">Receita Perdida</th>
-                  <th data-tab="3">Receita Mensal</th>
-                  <th data-tab="4">Nº de Cancelamentos</th>
-                  <th data-tab="1,2,3,4">Percentual</th>
-                  <th data-tab="5">Status</th>
+                  <th>Plano</th>
+                  <th>Vendas</th>
+                  <th>Receita</th>
+                  <th>Percentual</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td id="plano" data-tab="1,2,3,5">Duo</td>
-                  <td id="nome" data-tab="5">Aparecido Nascimento</td>
-                  <td id="cancelamentos" data-tab="2">40</td>
-                  <td id="vendas" data-tab="1">40</td>
-                  <td id="total-assinantes" data-tab="3">50</td>
-                  <td id="motivo-cancelamento" data-tab="4">Escalabilidade</td>
-                  <td id="receita-vendas" data-tab="1">18.92k</td>
-                  <td id="receita-perdida" data-tab="2">30k</td>
-                  <td id="receita-mensal" data-tab="3">11.2k</td>
-                  <td id="numero-cancelamentos" data-tab="4">28</td>
-                  <td class="status" data-tab="5">On<div
-                      style="background-color: var(--success-main); border-radius: 50%; width: 14px; height: 14px;">
-                    </div>
-                  </td>
-                  <td data-tab="1,2,3,4">
+                  <td id="plano">Duo</td>
+                  <td id="vendas">43</td>
+                  <td id="receita-vendas">18.92k</td>
+                  <td>
                     <div class="progress-container">
                       <div class="table-percentual">
                         <div class="progress-fill uc" style="width: 80.50%;"></div>
@@ -303,143 +284,330 @@
                   </td>
                 </tr>
                 <tr>
-                  <td id="plano" data-tab="1,2,3,5">Pro</td>
-                  <td id="nome" data-tab="5">Joao Emanuel</td>
-                  <td id="cancelamentos" data-tab="2">18</td>
-                  <td id="vendas" data-tab="1">20</td>
-                  <td id="total-assinantes" data-tab="3">21</td>
-                  <td id="motivo-cancelamento" data-tab="4">Sem acessibilidade</td>
-                  <td id="receita-vendas" data-tab="1">15.92k</td>
-                  <td id="receita-perdida" data-tab="2">23k</td>
-                  <td id="receita-mensal" data-tab="3">16.2k</td>
-                  <td id="numero-cancelamentos" data-tab="4">23</td>
-                  <td class="status" data-tab="5">Off<div
-                      style="background-color: var(--error-main); border-radius: 50%; width: 14px; height: 14px;"></div>
-                  </td>
-                  <td data-tab="1,2,3,4">
+                  <td id="plano">Pro</td>
+                  <td id="vendas">44</td>
+                  <td id="receita-vendas">28.92k</td>
+                  <td>
                     <div class="progress-container">
                       <div class="table-percentual">
-                        <div class="progress-fill chrome" style="width: 85.12%;"></div>
+                        <div class="progress-fill opera" style="width: 80.50%;"></div>
                       </div>
-                      <span class="progress-value">85.12%</span>
+                      <span class="progress-value">80.50%</span>
                     </div>
                   </td>
                 </tr>
                 <tr>
-                  <td id="plano" data-tab="1,2,3,5">Solo</td>
-                  <td id="nome" data-tab="5">Nonato Tavares</td>
-                  <td id="cancelamentos" data-tab="2">25</td>
-                  <td id="vendas" data-tab="1">55</td>
-                  <td id="total-assinantes" data-tab="3">78</td>
-                  <td id="motivo-cancelamento" data-tab="4">Preço</td>
-                  <td id="receita-vendas" data-tab="1">50k</td>
-                  <td id="receita-perdida" data-tab="2">30k</td>
-                  <td id="receita-mensal" data-tab="3">45.2k</td>
-                  <td id="numero-cancelamentos" data-tab="4">60</td>
-                  <td class="status" data-tab="5">Off<div
-                      style="background-color: var(--error-main); border-radius: 50%; width: 14px; height: 14px;"></div>
-                  </td>
-                  <td data-tab="1,2,3,4">
+                  <td id="plano">Duo</td>
+                  <td id="vendas">33</td>
+                  <td id="receita-vendas">22.29k</td>
+                  <td>
                     <div class="progress-container">
                       <div class="table-percentual">
-                        <div class="progress-fill uc" style="width: 71.16%;"></div>
+                        <div class="progress-fill safari" style="width: 65.09%;"></div>
                       </div>
-                      <span class="progress-value">71.16%</span>
+                      <span class="progress-value">65.09%</span>
                     </div>
                   </td>
                 </tr>
                 <tr>
-                  <td id="plano" data-tab="1,2,3,5">Pro</td>
-                  <td id="nome" data-tab="5">Lara Rodrigues</td>
-                  <td id="cancelamentos" data-tab="2">22</td>
-                  <td id="vendas" data-tab="1">52</td>
-                  <td id="total-assinantes" data-tab="3">30</td>
-                  <td id="motivo-cancelamento" data-tab="4">Falta de recursos disponiveis</td>
-                  <td id="receita-vendas" data-tab="1">16.5k</td>
-                  <td id="receita-perdida" data-tab="2">15k</td>
-                  <td id="receita-mensal" data-tab="3">36.2k</td>
-                  <td id="numero-cancelamentos" data-tab="4">40</td>
-                  <td class="status" data-tab="5">On <div
-                      style="background-color: var(--success-main); border-radius: 50%; width: 14px; height: 14px;">
-                    </div>
-                  </td>
-                  <td data-tab="1,2,3,4">
+                  <td id="plano">Solo</td>
+                  <td id="vendas">55</td>
+                  <td id="receita-vendas">28.99k</td>
+                  <td>
                     <div class="progress-container">
                       <div class="table-percentual">
-                        <div class="progress-fill safari" style="width: 42.1%;"></div>
+                        <div class="progress-fill edge" style="width: 70.50%;"></div>
                       </div>
-                      <span class="progress-value">42.1%</span>
+                      <span class="progress-value">70.50%</span>
                     </div>
                   </td>
                 </tr>
                 <tr>
-                  <td id="plano" data-tab="1,2,3,5">Duo</td>
-                  <td id="nome" data-tab="5">José Silva</td>
-                  <td id="cancelamentos" data-tab="2">4</td>
-                  <td id="vendas" data-tab="1">12</td>
-                  <td id="total-assinantes" data-tab="3">26</td>
-                  <td id="motivo-cancelamento" data-tab="4">Suporte</td>
-                  <td id="receita-vendas" data-tab="1">40k</td>
-                  <td id="receita-perdida" data-tab="2">10k</td>
-                  <td id="receita-mensal" data-tab="3">32.2k</td>
-                  <td id="numero-cancelamentos" data-tab="4">2</td>
-                  <td class="status" data-tab="5">On <div
-                      style="background-color: var(--success-main); border-radius: 50%; width: 14px; height: 14px;">
-                    </div>
-                  </td>
-                  <td data-tab="1,2,3,4">
+                  <td id="plano">Solo</td>
+                  <td id="vendas">87</td>
+                  <td id="receita-vendas">43.11k</td>
+                  <td>
                     <div class="progress-container">
                       <div class="table-percentual">
-                        <div class="progress-fill firefox" style="width: 30.22%;"></div>
+                        <div class="progress-fill firefox" style="width: 55.23%;"></div>
                       </div>
-                      <span class="progress-value">30.22%</span>
+                      <span class="progress-value">55.23%</span>
                     </div>
                   </td>
                 </tr>
                 <tr>
-                  <td id="plano" data-tab="1,2,3,5">Solo</td>
-                  <td id="nome" data-tab="5">Francisa Amanda</td>
-                  <td id="cancelamentos" data-tab="2">45</td>
-                  <td id="vendas" data-tab="1">2</td>
-                  <td id="total-assinantes" data-tab="3">10</td>
-                  <td id="motivo-cancelamento" data-tab="4">Preço</td>
-                  <td id="receita-vendas" data-tab="1">13</td>
-                  <td id="receita-perdida" data-tab="2">3k</td>
-                  <td id="receita-mensal" data-tab="3">5k</td>
-                  <td id="numero-cancelamentos" data-tab="4">15</td>
-                  <td class="status" data-tab="5">Off<div
-                      style="background-color: var(--error-main); border-radius: 50%; width: 14px; height: 14px;"></div>
-                  </td>
-                  <td data-tab="1,2,3,4">
+                  <td id="plano">Pro</td>
+                  <td id="vendas">32</td>
+                  <td id="receita-vendas">11.90k</td>
+                  <td>
                     <div class="progress-container">
                       <div class="table-percentual">
-                        <div class="progress-fill edge" style="width: 14.12%;"></div>
+                        <div class="progress-fill chrome" style="width: 30.50%;"></div>
                       </div>
-                      <span class="progress-value">14.12%</span>
+                      <span class="progress-value">30.50%</span>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table id="tab2" class="table">
+              <thead>
+                <tr>
+                  <th>Plano</th>
+                  <th>Cancelamentos</th>
+                  <th>Receita Perdida</th>
+                  <th>Percentual</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td id="plano">Solo</td>
+                  <td id="cancelamentos">389</td>
+                  <td id="receita-perdida">15.20k</td>
+                  <td>
+                    <div class="progress-container">
+                      <div class="table-percentual">
+                        <div class="progress-fill uc" style="width: 50.50%;"></div>
+                      </div>
+                      <span class="progress-value">50.50%</span>
                     </div>
                   </td>
                 </tr>
                 <tr>
-                  <td id="plano" data-tab="1,2,3,5">Pro</td>
-                  <td id="nome" data-tab="5">João Ferreira</td>
-                  <td id="cancelamentos" data-tab="2">15</td>
-                  <td id="vendas" data-tab="1">42</td>
-                  <td id="total-assinantes" data-tab="3">27</td>
-                  <td id="motivo-cancelamento" data-tab="4">Sem acessibilidade</td>
-                  <td id="receita-vendas" data-tab="1">15.92k</td>
-                  <td id="receita-perdida" data-tab="2">23k</td>
-                  <td id="receita-mensal" data-tab="3">16.2k</td>
-                  <td id="numero-cancelamentos" data-tab="4">23</td>
-                  <td class="status" data-tab="5">On <div
-                      style="background-color: var(--success-main); border-radius: 50%; width: 14px; height: 14px;">
-                    </div>
-                  </td>
-                  <td data-tab="1,2,3,4">
+                  <td id="plano">Pro</td>
+                  <td id="cancelamentos">34</td>
+                  <td id="receita-perdida">11.20k</td>
+                  <td>
                     <div class="progress-container">
                       <div class="table-percentual">
-                        <div class="progress-fill opera" style="width: 55.12%;"></div>
+                        <div class="progress-fill opera" style="width: 66.50%;"></div>
                       </div>
-                      <span class="progress-value">55.12%</span>
+                      <span class="progress-value">66.50%</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td id="plano">Duo</td>
+                  <td id="cancelamentos">89</td>
+                  <td id="receita-perdida">20.06k</td>
+                  <td>
+                    <div class="progress-container">
+                      <div class="table-percentual">
+                        <div class="progress-fill safari" style="width: 50.50%;"></div>
+                      </div>
+                      <span class="progress-value">50.50%</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td id="plano">Solo</td>
+                  <td id="cancelamentos">90</td>
+                  <td id="receita-perdida">35.90k</td>
+                  <td>
+                    <div class="progress-container">
+                      <div class="table-percentual">
+                        <div class="progress-fill edge" style="width: 91.55%;"></div>
+                      </div>
+                      <span class="progress-value">91.55%</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td id="plano">Pro</td>
+                  <td id="cancelamentos">39</td>
+                  <td id="receita-perdida">23.80k</td>
+                  <td>
+                    <div class="progress-container">
+                      <div class="table-percentual">
+                        <div class="progress-fill firefox" style="width: 57.30%;"></div>
+                      </div>
+                      <span class="progress-value">57.30%</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td id="plano">Duo</td>
+                  <td id="cancelamentos">21</td>
+                  <td id="receita-perdida">5.20k</td>
+                  <td>
+                    <div class="progress-container">
+                      <div class="table-percentual">
+                        <div class="progress-fill chrome" style="width: 62.50%;"></div>
+                      </div>
+                      <span class="progress-value">62.50%</span>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table id="tab3" class="table">
+              <thead>
+                <tr>
+                  <th>Plano</th>
+                  <th>Total de Assinantes</th>
+                  <th>Receita Mensal</th>
+                  <th>Percentual</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td id="plano">Solo</td>
+                  <td id="total-assinantes">220</td>
+                  <td id="receita-mensal">40.29k</td>
+                  <td>
+                    <div class="progress-container">
+                      <div class="table-percentual">
+                        <div class="progress-fill uc" style="width: 88.30%;"></div>
+                      </div>
+                      <span class="progress-value">88.30%</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td id="plano">Pro</td>
+                  <td id="total-assinantes">304</td>
+                  <td id="receita-mensal">34.25k</td>
+                  <td>
+                    <div class="progress-container">
+                      <div class="table-percentual">
+                        <div class="progress-fill opera" style="width: 70.34%;"></div>
+                      </div>
+                      <span class="progress-value">70.34%</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td id="plano">Solo</td>
+                  <td id="total-assinantes">38</td>
+                  <td id="receita-mensal">3.98k</td>
+                  <td>
+                    <div class="progress-container">
+                      <div class="table-percentual">
+                        <div class="progress-fill safari" style="width: 33.65%;"></div>
+                      </div>
+                      <span class="progress-value">33.65%</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td id="plano">Duo</td>
+                  <td id="total-assinantes">126</td>
+                  <td id="receita-mensal">44.43k</td>
+                  <td>
+                    <div class="progress-container">
+                      <div class="table-percentual">
+                        <div class="progress-fill edge" style="width: 77.67%;"></div>
+                      </div>
+                      <span class="progress-value">77.67%</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td id="plano">Solo</td>
+                  <td id="total-assinantes">54</td>
+                  <td id="receita-mensal">23.76k</td>
+                  <td>
+                    <div class="progress-container">
+                      <div class="table-percentual">
+                        <div class="progress-fill firefox" style="width: 65.98%;"></div>
+                      </div>
+                      <span class="progress-value">65.98%</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td id="plano">Pro</td>
+                  <td id="total-assinantes">444</td>
+                  <td id="receita-mensal">50.65k</td>
+                  <td>
+                    <div class="progress-container">
+                      <div class="table-percentual">
+                        <div class="progress-fill chrome" style="width: 93.69%;"></div>
+                      </div>
+                      <span class="progress-value">93.69%</span>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table id="tab4" class="table">
+              <thead>
+                <tr>
+                  <th>Motivo</th>
+                  <th>N° de Cancelamentos</th>
+                  <th>Percentual</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td id="motivo">Solo</td>
+                  <td id="numero-cancelamentos">340</td>
+                  <td>
+                    <div class="progress-container">
+                      <div class="table-percentual">
+                        <div class="progress-fill uc" style="width: 88.40%;"></div>
+                      </div>
+                      <span class="progress-value">88.40%</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td id="motivo">Pro</td>
+                  <td id="numero-cancelamentos">28</td>
+                  <td>
+                    <div class="progress-container">
+                      <div class="table-percentual">
+                        <div class="progress-fill opera" style="width: 22.34%;"></div>
+                      </div>
+                      <span class="progress-value">22.34%</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td id="motivo">Solo</td>
+                  <td id="numero-cancelamentos">200</td>
+                  <td>
+                    <div class="progress-container">
+                      <div class="table-percentual">
+                        <div class="progress-fill safari" style="width: 43.65%;"></div>
+                      </div>
+                      <span class="progress-value">43.65%</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td id="motivo">Duo</td>
+                  <td id="numero-cancelamentos">123</td>
+                  <td>
+                    <div class="progress-container">
+                      <div class="table-percentual">
+                        <div class="progress-fill edge" style="width: 53.29%;"></div>
+                      </div>
+                      <span class="progress-value">53.29%</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td id="motivo">Pro</td>
+                  <td id="numero-cancelamentos">202</td>
+                  <td>
+                    <div class="progress-container">
+                      <div class="table-percentual">
+                        <div class="progress-fill firefox" style="width: 20.44%;"></div>
+                      </div>
+                      <span class="progress-value">20.44%</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td id="motivo">Solo</td>
+                  <td id="numero-cancelamentos">320</td>
+                  <td>
+                    <div class="progress-container">
+                      <div class="table-percentual">
+                        <div class="progress-fill chrome" style="width: 70.34%;"></div>
+                      </div>
+                      <span class="progress-value">70.34%</span>
                     </div>
                   </td>
                 </tr>
@@ -449,7 +617,7 @@
         </div>
       </div>
       <div class="row justify-content-space-between" style="padding: 0 12px 0 12px;">
-       <!--  <div class="container col-7">
+        <!--  <div class="container col-7">
           <div class="container-header">
             <h5>Clientes</h5>
             <div class="date-filter-dropdown">

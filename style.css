@@ -145,6 +145,7 @@ body a {
   background-color: var(--bg-white);
   box-shadow: var(--shadow-md);
   border-radius: 6px;
+  margin-right: 0 !important;
 }
 
 .vendas-cancelamento .vendas-header, .historico-mrr .historico-header {
@@ -209,14 +210,18 @@ body a {
 }
 
 .table-container {
-  max-height: 380px;
+  max-height: 380px !important;
   overflow-y: auto;
 }
 
+table.active {
+  display: table;
+}
 
 table {
-  width: 90%;
-  margin-left: 24px;
+  display: none;
+  width: 90% !important;
+  margin-left: 24px !important;
   border-collapse: collapse;
   text-align: left;
 }
@@ -234,24 +239,16 @@ tbody {
 
 th,
 td {
-  padding: 15px;
-  color: var(--text-primary);
-}
-
-td.status {
-  display: none;
-}
-
-td.status.visible {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  padding: 15px !important;
+  color: var(--text-primary) !important;
+  border: 0 !important;
 }
 
 th {
-  font-weight: normal;
-  text-transform: uppercase;
-  color: var(--text-primary);
+  font-weight: normal !important;
+  text-transform: uppercase !important;
+  color: var(--text-primary) !important;
+  border: 0 !important;
 }
 
 .progress-container {
@@ -433,4 +430,11 @@ th {
 
 .ticket-icon img {
   width: 1.3rem;
+}
+
+
+@media (max-width: 1200px) {
+  .vendas-cancelamento, .historico-mrr {
+    margin-right: calc(-.5* var(--bs-gutter-x)) !important;
+  }
 }
