@@ -1,7 +1,7 @@
 const tabs = document.querySelectorAll('.tab');
 const vendasChart = document.getElementById('vendasCancelamentos').getContext('2d')
 const historicoChart = document.getElementById('historicoMRR').getContext('2d')
-const visitasChart = document.getElementById('diasMaisVisitas').getContext('2d')
+/* const visitasChart = document.getElementById('diasMaisVisitas').getContext('2d') */
 const tableHeaders = document.querySelectorAll('th');
 const tableCells = document.querySelectorAll('td');
 
