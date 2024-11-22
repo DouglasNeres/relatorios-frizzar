@@ -187,6 +187,7 @@ body a {
   justify-content: flex-start;
   border-bottom: 1px solid var(--divider);
   padding: 10px 30px;
+  overflow-x: auto;
 }
 
 .tab {
@@ -212,6 +213,7 @@ body a {
 .table-container {
   max-height: 380px !important;
   overflow-y: auto;
+  overflow-x: auto;
 }
 
 table.active {
