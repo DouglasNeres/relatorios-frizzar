@@ -1,6 +1,6 @@
 const vendasChart = document.getElementById('vendasCancelamentos').getContext('2d')
 const historicoChart = document.getElementById('historicoMRR').getContext('2d')
-/* const visitasChart = document.getElementById('diasMaisVisitas').getContext('2d') */
+const visitasChart = document.getElementById('diasMaisVisitas').getContext('2d')
 
 document.querySelectorAll('.tab').forEach((tab) => {
   tab.addEventListener('click', () => {
@@ -119,6 +119,7 @@ document.querySelectorAll('.tab').forEach((tab) => {
     },
     options: {
       responsive: true,
+      maintainAspectRatio: false,
       plugins: {
           legend: {
               position: 'top',

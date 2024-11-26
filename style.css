@@ -308,10 +308,10 @@ th {
 .collection {
   display: flex;
   align-items: center;
-  gap: 6rem;
+  justify-content: space-between;
   background-color: var(--bg-white);
   box-shadow: var(--shadow-md);
-  padding: 3rem 2.5rem;
+  padding: 2.5rem !important;
   border-radius: 6px;
 }
 
@@ -357,7 +357,6 @@ th {
   background-color: var(--bg-white);
   display: flex;
   justify-content: space-between;
-  flex-grow: 1;
   gap: 1rem;
 }
 
@@ -438,5 +437,13 @@ th {
 @media (max-width: 1200px) {
   .vendas-cancelamento, .historico-mrr {
     margin-right: calc(-.5* var(--bs-gutter-x)) !important;
+  }
+
+  .collection {
+    margin-top: 1rem !important;
+  }
+
+  .right-cards {
+    padding-left: 0 !important;
   }
 }

@@ -617,7 +617,7 @@
         </div>
       </div>
       <div class="row justify-content-space-between" style="padding: 0 12px 0 12px;">
-        <!--  <div class="container col-7">
+        <div class="container col-12 col-xl-7">
           <div class="container-header">
             <h5>Clientes</h5>
             <div class="date-filter-dropdown">
@@ -637,61 +637,320 @@
             </div>
           </div>
           <div class="tabs">
-            <div class="tab active">Mais Visitas</div>
-            <div class="tab">Serviço Extra</div>
-            <div class="tab">Produtos</div>
-            <div class="tab">Novos Assinantes</div>
+            <div class="tab active" data-target="#tab1">Mais Visitas</div>
+            <div class="tab" data-target="#tab2">Serviço Extra</div>
+            <div class="tab" data-target="#tab3">Produtos</div>
+            <div class="tab" data-target="#tab4">Novos Assinantes</div>
           </div>
           <div class="table-container">
-            <table>
+            <table id="tab1" class="table active">
               <thead>
                 <tr>
-                  <th>Plano</th>
                   <th>Nome</th>
+                  <th>Plano</th>
                   <th>Total</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
+                  <td id="nome">Francisco Oliveira</td>
+                  <td id="plano">Solo</td>
+                  <td id="total">342</td>
+                </tr>
+                <tr>
+                  <td id="nome">Raimundo Nonato</td>
+                  <td id="plano">Pro</td>
+                  <td id="total">211</td>
+                </tr>
+                <tr>
+                  <td id="nome">Thalita Marques</td>
                   <td id="plano">Duo</td>
-                  <td id="nome">Aparecido Nascimento</td>
-                  <td id="total-assinantes">502</td>
+                  <td id="total">121</td>
+                </tr>
+                <tr>
+                  <td id="nome">Leonardo Meneguete</td>
+                  <td id="plano">Solo</td>
+                  <td id="total">145</td>
+                </tr>
+                <tr>
+                  <td id="nome">Gabriel Lima</td>
+                  <td id="plano">87</td>
+                  <td id="total">332</td>
+                </tr>
+                <tr>
+                  <td id="nome">Leticia Nascimento</td>
+                  <td id="plano">Duo</td>
+                  <td id="total">400</td>
+                </tr>
+              </tbody>
+            </table>
+            <table id="tab2" class="table">
+              <thead>
+                <tr>
+                  <th>Plano</th>
+                  <th>Cancelamentos</th>
+                  <th>Receita Perdida</th>
+                  <th>Percentual</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td id="plano">Solo</td>
+                  <td id="cancelamentos">389</td>
+                  <td id="receita-perdida">15.20k</td>
+                  <td>
+                    <div class="progress-container">
+                      <div class="table-percentual">
+                        <div class="progress-fill uc" style="width: 50.50%;"></div>
+                      </div>
+                      <span class="progress-value">50.50%</span>
+                    </div>
+                  </td>
                 </tr>
                 <tr>
                   <td id="plano">Pro</td>
-                  <td id="nome">Raissa Oliveira</td>
-                  <td id="total-assinantes">112</td>
+                  <td id="cancelamentos">34</td>
+                  <td id="receita-perdida">11.20k</td>
+                  <td>
+                    <div class="progress-container">
+                      <div class="table-percentual">
+                        <div class="progress-fill opera" style="width: 66.50%;"></div>
+                      </div>
+                      <span class="progress-value">66.50%</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td id="plano">Duo</td>
+                  <td id="cancelamentos">89</td>
+                  <td id="receita-perdida">20.06k</td>
+                  <td>
+                    <div class="progress-container">
+                      <div class="table-percentual">
+                        <div class="progress-fill safari" style="width: 50.50%;"></div>
+                      </div>
+                      <span class="progress-value">50.50%</span>
+                    </div>
+                  </td>
                 </tr>
                 <tr>
                   <td id="plano">Solo</td>
-                  <td id="nome">Leticia Amanda</td>
-                  <td id="total-assinantes">322</td>
+                  <td id="cancelamentos">90</td>
+                  <td id="receita-perdida">35.90k</td>
+                  <td>
+                    <div class="progress-container">
+                      <div class="table-percentual">
+                        <div class="progress-fill edge" style="width: 91.55%;"></div>
+                      </div>
+                      <span class="progress-value">91.55%</span>
+                    </div>
+                  </td>
                 </tr>
                 <tr>
                   <td id="plano">Pro</td>
-                  <td id="nome">João Gomes</td>
-                  <td id="total-assinantes">132</td>
+                  <td id="cancelamentos">39</td>
+                  <td id="receita-perdida">23.80k</td>
+                  <td>
+                    <div class="progress-container">
+                      <div class="table-percentual">
+                        <div class="progress-fill firefox" style="width: 57.30%;"></div>
+                      </div>
+                      <span class="progress-value">57.30%</span>
+                    </div>
+                  </td>
                 </tr>
                 <tr>
                   <td id="plano">Duo</td>
-                  <td id="nome">Gabriel Vieira</td>
-                  <td id="total-assinantes">210</td>
+                  <td id="cancelamentos">21</td>
+                  <td id="receita-perdida">5.20k</td>
+                  <td>
+                    <div class="progress-container">
+                      <div class="table-percentual">
+                        <div class="progress-fill chrome" style="width: 62.50%;"></div>
+                      </div>
+                      <span class="progress-value">62.50%</span>
+                    </div>
+                  </td>
                 </tr>
+              </tbody>
+            </table>
+            <table id="tab3" class="table">
+              <thead>
+                <tr>
+                  <th>Plano</th>
+                  <th>Total de Assinantes</th>
+                  <th>Receita Mensal</th>
+                  <th>Percentual</th>
+                </tr>
+              </thead>
+              <tbody>
                 <tr>
                   <td id="plano">Solo</td>
-                  <td id="nome">Amâncio Tavares</td>
-                  <td id="total-assinantes">205</td>
+                  <td id="total-assinantes">220</td>
+                  <td id="receita-mensal">40.29k</td>
+                  <td>
+                    <div class="progress-container">
+                      <div class="table-percentual">
+                        <div class="progress-fill uc" style="width: 88.30%;"></div>
+                      </div>
+                      <span class="progress-value">88.30%</span>
+                    </div>
+                  </td>
                 </tr>
                 <tr>
                   <td id="plano">Pro</td>
-                  <td id="nome">Carol Lima</td>
-                  <td id="total-assinantes">498</td>
+                  <td id="total-assinantes">304</td>
+                  <td id="receita-mensal">34.25k</td>
+                  <td>
+                    <div class="progress-container">
+                      <div class="table-percentual">
+                        <div class="progress-fill opera" style="width: 70.34%;"></div>
+                      </div>
+                      <span class="progress-value">70.34%</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td id="plano">Solo</td>
+                  <td id="total-assinantes">38</td>
+                  <td id="receita-mensal">3.98k</td>
+                  <td>
+                    <div class="progress-container">
+                      <div class="table-percentual">
+                        <div class="progress-fill safari" style="width: 33.65%;"></div>
+                      </div>
+                      <span class="progress-value">33.65%</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td id="plano">Duo</td>
+                  <td id="total-assinantes">126</td>
+                  <td id="receita-mensal">44.43k</td>
+                  <td>
+                    <div class="progress-container">
+                      <div class="table-percentual">
+                        <div class="progress-fill edge" style="width: 77.67%;"></div>
+                      </div>
+                      <span class="progress-value">77.67%</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td id="plano">Solo</td>
+                  <td id="total-assinantes">54</td>
+                  <td id="receita-mensal">23.76k</td>
+                  <td>
+                    <div class="progress-container">
+                      <div class="table-percentual">
+                        <div class="progress-fill firefox" style="width: 65.98%;"></div>
+                      </div>
+                      <span class="progress-value">65.98%</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td id="plano">Pro</td>
+                  <td id="total-assinantes">444</td>
+                  <td id="receita-mensal">50.65k</td>
+                  <td>
+                    <div class="progress-container">
+                      <div class="table-percentual">
+                        <div class="progress-fill chrome" style="width: 93.69%;"></div>
+                      </div>
+                      <span class="progress-value">93.69%</span>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table id="tab4" class="table">
+              <thead>
+                <tr>
+                  <th>Motivo</th>
+                  <th>N° de Cancelamentos</th>
+                  <th>Percentual</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td id="motivo">Solo</td>
+                  <td id="numero-cancelamentos">340</td>
+                  <td>
+                    <div class="progress-container">
+                      <div class="table-percentual">
+                        <div class="progress-fill uc" style="width: 88.40%;"></div>
+                      </div>
+                      <span class="progress-value">88.40%</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td id="motivo">Pro</td>
+                  <td id="numero-cancelamentos">28</td>
+                  <td>
+                    <div class="progress-container">
+                      <div class="table-percentual">
+                        <div class="progress-fill opera" style="width: 22.34%;"></div>
+                      </div>
+                      <span class="progress-value">22.34%</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td id="motivo">Solo</td>
+                  <td id="numero-cancelamentos">200</td>
+                  <td>
+                    <div class="progress-container">
+                      <div class="table-percentual">
+                        <div class="progress-fill safari" style="width: 43.65%;"></div>
+                      </div>
+                      <span class="progress-value">43.65%</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td id="motivo">Duo</td>
+                  <td id="numero-cancelamentos">123</td>
+                  <td>
+                    <div class="progress-container">
+                      <div class="table-percentual">
+                        <div class="progress-fill edge" style="width: 53.29%;"></div>
+                      </div>
+                      <span class="progress-value">53.29%</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td id="motivo">Pro</td>
+                  <td id="numero-cancelamentos">202</td>
+                  <td>
+                    <div class="progress-container">
+                      <div class="table-percentual">
+                        <div class="progress-fill firefox" style="width: 20.44%;"></div>
+                      </div>
+                      <span class="progress-value">20.44%</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td id="motivo">Solo</td>
+                  <td id="numero-cancelamentos">320</td>
+                  <td>
+                    <div class="progress-container">
+                      <div class="table-percentual">
+                        <div class="progress-fill chrome" style="width: 70.34%;"></div>
+                      </div>
+                      <span class="progress-value">70.34%</span>
+                    </div>
+                  </td>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
-        <div class="col-5 d-flex flex-column gap-2">
+        <div class="right-cards col-12 col-xl-5 d-flex flex-column gap-3">
+          <div class="row" style="margin-left: 0;">
           <div class="collection">
             <div class="collection-content">
               <h5>Clientes em Atraso</h5>
@@ -705,8 +964,8 @@
               <img src="assets/atrasado.png" alt="Ícone de cobrança">
             </div>
           </div>
-          <div class="d-flex gap-2">
-            <div class="col">
+        </div>
+          <div class="row-cols-sm-2 d-flex gap-3">
               <div class="card extra-services">
                 <div class="extra-services-content">
                   <p>Serviços Extras</p>
@@ -740,11 +999,9 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="col">
               <div class="card visiting-days gap-4">
                 <div class="visiting-days-content">
-                  <p>Dias de mais visitas</p>
+                  <p>Maior Uso</p>
                   <div class="date-filter-dropdown">
                     <button type="button" class="date-filter">Nov</button>
                     <button type="button" class="dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown">
@@ -762,13 +1019,14 @@
                   </div>
                 </div>
                 <div>
-                  <h4>35 dias</h4>
+                  <h4>Sexta</h4>
+                  <div>
+                  <canvas height="120" id="diasMaisVisitas"></canvas>
                 </div>
-                <canvas height="40" width="100" id="diasMaisVisitas"></canvas>
+                </div>
               </div>
-            </div>
           </div>
-        </div> -->
+        </div>
       </div>
       <!-- <div class="row tickets">
       <div class="col-md-6 ticket-assinatura">
@@ -795,7 +1053,8 @@
           <img src="assets/outline.png" alt="Global Icon">
         </div>
       </div>
-    </div> -->
+      </div> -->
+    </div>
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
       <script src="script.js"></script>
 </body>
