@@ -9,6 +9,7 @@
   --divider: #22303E1F;
 
   --success-main: #71DD37;
+  --success-opacity-main: #71DD373D;
 
   --error-main: #FF3E1D;
   --error-opacity-darker: #FF3E1D61;
@@ -20,6 +21,8 @@
   --primary-main: #696CFF;
 
   --warning-opacity-darker: #FFAB0061;
+  --warning-opacity-main: #FFBC333D;
+  --warning-main: #FFBC33;
 
   --shadow-md: 0px 3px 8px rgba(20, 20, 29, 0.22);
   --primary-shadow-sm: 0px 2px 4px rgba(105, 108, 255, 0.4);
@@ -401,39 +404,47 @@ th {
 
 .tickets {
   display: flex;
-  justify-content: space-between;
 }
 
-.ticket-assinatura, .ticket-avulso {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-radius: 1.25rem;
-  padding: 1rem 2rem !important;
-  background: linear-gradient(135deg, #E4EAF7 0%, #D3D8EB 100%);
-}
-
-.ticket-content h5 {
+.ticket-medio h6 {
   color: var(--text-secondary);
 }
 
-.ticket-content h3 {
+.ticket-medio h5 {
   color: var(--text-primary);
+  font-size: 22px;
 }
 
-.ticket-icon {
+.ticket-content {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #0075FF;
-  border-radius: .75rem;
-  padding: 1rem;
+  gap: 2rem;
 }
 
-.ticket-icon img {
-  width: 1.3rem;
+.ticket-medio .ticket-assinaturas, .ticket-medio .ticket-avulso {
+  display: flex;
+  flex-direction: column;
 }
 
+.ticket-medio .ticket-assinaturas .percentual {
+  padding: 5px;
+  border-radius: 4px;
+  background-color: var(--success-opacity-main);
+} 
+.ticket-medio .ticket-avulso .percentual {
+  padding: 5px;
+  border-radius: 4px;
+  background-color: var(--warning-opacity-main);
+}
+
+.ticket-medio .ticket-assinaturas span {
+  color: var(--success-main);
+  font-weight: 600;
+}
+
+.ticket-medio .ticket-avulso span {
+  color: var(--warning-main);
+  font-weight: 600;
+}
 
 @media (max-width: 1200px) {
   .vendas-cancelamento, .historico-mrr {
@@ -446,6 +457,12 @@ th {
 
   .right-cards {
     padding-left: 0 !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .tickets {
+    gap: 1rem;
   }
 }
 
