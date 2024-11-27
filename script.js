@@ -2,16 +2,21 @@ const vendasChart = document.getElementById('vendasCancelamentos').getContext('2
 const historicoChart = document.getElementById('historicoMRR').getContext('2d')
 const visitasChart = document.getElementById('diasMaisVisitas').getContext('2d')
 
-document.querySelectorAll('.tab').forEach((tab) => {
-  tab.addEventListener('click', () => {
-    document.querySelectorAll('.tab').forEach((t) => t.classList.remove('active'));
-    document.querySelectorAll('.table').forEach((table) => table.classList.remove('active'));
-
-    tab.classList.add('active');
-    const targetTable = document.querySelector(tab.getAttribute('data-target'));
-    targetTable.classList.add('active');
+document.querySelectorAll('.container').forEach((container) => {
+    const tabs = container.querySelectorAll('.tab');
+    const tables = container.querySelectorAll('.table');
+  
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        tabs.forEach((t) => t.classList.remove('active'));
+        tables.forEach((table) => table.classList.remove('active'));
+  
+        tab.classList.add('active');
+        const targetTable = container.querySelector(tab.getAttribute('data-target'));
+        targetTable.classList.add('active');
+      });
+    });
   });
-});
 
   new Chart(vendasChart, {
     type: 'bar',
