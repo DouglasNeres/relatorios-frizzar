@@ -358,6 +358,7 @@ th {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
+  min-width: 250px !important;
 }
 
 .extra-services-content, .visiting-days-content{
@@ -445,5 +446,17 @@ th {
 
   .right-cards {
     padding-left: 0 !important;
+  }
+}
+
+@media (max-width: 530px) {
+  .collection img {
+    height: 10rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .collection img {
+    display: none;
   }
 }
