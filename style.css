@@ -405,7 +405,6 @@ th {
 .tickets {
   display: flex;
 }
-
 .ticket-medio h6 {
   color: var(--text-secondary);
 }
@@ -425,15 +424,19 @@ th {
   flex-direction: column;
 }
 
-.ticket-medio .ticket-assinaturas .percentual {
+.ticket-medio .ticket-assinaturas .percentual, .ticket-medio .ticket-assinaturas .percentual-mobile {
   padding: 5px;
   border-radius: 4px;
   background-color: var(--success-opacity-main);
 } 
-.ticket-medio .ticket-avulso .percentual {
+.ticket-medio .ticket-avulso .percentual, .ticket-medio .ticket-avulso .percentual-mobile {
   padding: 5px;
   border-radius: 4px;
   background-color: var(--warning-opacity-main);
+}
+
+.percentual-mobile {
+  display: none;
 }
 
 .ticket-medio .ticket-assinaturas span {
@@ -474,6 +477,14 @@ th {
 
 @media (max-width: 425px) {
   .collection img {
+    display: none;
+  }
+
+  .percentual-mobile {
+    display: block
+  }
+
+  .percentual {
     display: none;
   }
 }
