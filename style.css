@@ -59,11 +59,12 @@ body a {
   box-shadow: var(--shadow-md);
   border: 0;
 }
+
 .mrr {
   border-bottom: 3px solid var(--primary-main) !important;
 }
 
- .assinantes {
+.assinantes {
   border-bottom: 3px solid var(--warning-opacity-darker) !important;
 }
 
@@ -141,7 +142,8 @@ body a {
   box-shadow: var(--primary-shadow-sm);
 }
 
-.vendas-cancelamento, .historico-mrr {
+.vendas-cancelamento,
+.historico-mrr {
   display: flex;
   flex-direction: column;
   padding: 2rem 1.25rem;
@@ -151,12 +153,14 @@ body a {
   margin-right: 0 !important;
 }
 
-.vendas-cancelamento .vendas-header, .historico-mrr .historico-header {
+.vendas-cancelamento .vendas-header,
+.historico-mrr .historico-header {
   display: flex;
   justify-content: space-between;
 }
 
-.vendas-cancelamento .vendas-header h5, .historico-mrr .historico-header h5 {
+.vendas-cancelamento .vendas-header h5,
+.historico-mrr .historico-header h5 {
   color: var(--text-primary);
 }
 
@@ -356,7 +360,8 @@ th {
   box-shadow: var(--primary-shadow-sm);
 }
 
-.extra-services, .visiting-days {
+.extra-services,
+.visiting-days {
   background-color: var(--bg-white);
   display: flex;
   justify-content: space-between;
@@ -364,10 +369,11 @@ th {
   min-width: 250px !important;
 }
 
-.extra-services-content, .visiting-days-content{
+.extra-services-content,
+.visiting-days-content {
   display: flex;
   align-items: center;
-  justify-content: space-between; 
+  justify-content: space-between;
 }
 
 .extra-services p {
@@ -405,6 +411,7 @@ th {
 .tickets {
   display: flex;
 }
+
 .ticket-medio h6 {
   color: var(--text-secondary);
 }
@@ -419,17 +426,21 @@ th {
   gap: 2rem;
 }
 
-.ticket-medio .ticket-assinaturas, .ticket-medio .ticket-avulso {
+.ticket-medio .ticket-assinaturas,
+.ticket-medio .ticket-avulso {
   display: flex;
   flex-direction: column;
 }
 
-.ticket-medio .ticket-assinaturas .percentual, .ticket-medio .ticket-assinaturas .percentual-mobile {
+.ticket-medio .ticket-assinaturas .percentual,
+.ticket-medio .ticket-assinaturas .percentual-mobile {
   padding: 5px;
   border-radius: 4px;
   background-color: var(--success-opacity-main);
-} 
-.ticket-medio .ticket-avulso .percentual, .ticket-medio .ticket-avulso .percentual-mobile {
+}
+
+.ticket-medio .ticket-avulso .percentual,
+.ticket-medio .ticket-avulso .percentual-mobile {
   padding: 5px;
   border-radius: 4px;
   background-color: var(--warning-opacity-main);
@@ -450,7 +461,9 @@ th {
 }
 
 @media (max-width: 1200px) {
-  .vendas-cancelamento, .historico-mrr {
+
+  .vendas-cancelamento,
+  .historico-mrr {
     margin-right: calc(-.5* var(--bs-gutter-x)) !important;
   }
 
@@ -484,7 +497,7 @@ th {
     display: block
   }
 
-  .percentual {
+  .ticket-medio .ticket-assinaturas .percentual, .ticket-medio .ticket-avulso .percentual {
     display: none;
   }
 }
