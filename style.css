@@ -461,7 +461,6 @@ th {
 }
 
 @media (max-width: 1200px) {
-
   .vendas-cancelamento,
   .historico-mrr {
     margin-right: calc(-.5* var(--bs-gutter-x)) !important;
@@ -473,6 +472,14 @@ th {
 
   .right-cards {
     padding-left: 0 !important;
+  }
+
+  .container, .container-lg, .container-md, .container-sm {
+    max-width: 100% !important;
+  }
+
+  .tables {
+    gap: 1.25rem;
   }
 }
 
