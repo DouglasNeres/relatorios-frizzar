@@ -5,15 +5,22 @@ const visitasChart = document.getElementById('diasMaisVisitas').getContext('2d')
 document.querySelectorAll('.container').forEach((container) => {
     const tabs = container.querySelectorAll('.tab');
     const tables = container.querySelectorAll('.table');
-  
+    const ltvCard = container.querySelector('.ltv-card');
+
     tabs.forEach((tab) => {
       tab.addEventListener('click', () => {
         tabs.forEach((t) => t.classList.remove('active'));
         tables.forEach((table) => table.classList.remove('active'));
-  
+
         tab.classList.add('active');
         const targetTable = container.querySelector(tab.getAttribute('data-target'));
         targetTable.classList.add('active');
+
+        if (tab.getAttribute('data-target') === '#tab1') {
+            ltvCard.classList.add('ltv-hidden');
+          } else if (tab.getAttribute('data-target') === '#tab2') {
+            ltvCard.classList.remove('ltv-hidden');
+          }
       });
     });
   });
