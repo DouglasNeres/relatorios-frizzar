@@ -19,7 +19,8 @@
   --info-main: #03C3EC;
   --info-light: #35CFF0;
 
-  --primary-main: #696CFF;
+  --primary-main: #424242;
+  --secundary-main: #ff2f2f;
 
   --warning-opacity-darker: #FFAB0061;
   --warning-opacity-main: #FFBC333D;
@@ -355,7 +356,7 @@ th {
   align-items: center;
   justify-content: center;
   padding: 10px 15px;
-  background: #6c63ff;
+  background-color: var(--secundary-main);
   color: var(--bg-white);
   border-radius: 6px;
   box-shadow: var(--primary-shadow-sm);
